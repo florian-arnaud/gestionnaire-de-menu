@@ -16,6 +16,6 @@ if (!isset($_SESSION['nom_utilisateur'])) {
 </head>
 <body>
     <p>Bienvenue, <?php echo $_SESSION["nom_utilisateur"]?></p>
-
+        
 </body>
 </html>

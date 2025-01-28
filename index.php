@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['nom_utilisateur'])) {
+    header('Location: login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,6 +15,7 @@
     <title>Gestionnaire de menus - Accueil</title>
 </head>
 <body>
-    
+    <p>Bienvenue, <?php echo $_SESSION["nom_utilisateur"]?></p>
+
 </body>
 </html>

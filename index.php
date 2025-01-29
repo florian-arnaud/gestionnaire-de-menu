@@ -1,9 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['nom_utilisateur'])) {
-    header('Location: login.php');
-    exit;
-}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,7 +13,27 @@ if (!isset($_SESSION['nom_utilisateur'])) {
     <title>Gestionnaire de menus - Accueil</title>
 </head>
 <body>
-    <p>Bienvenue, <?php echo $_SESSION["nom_utilisateur"]?></p>
+    <header>
+        <h1>Gestionnaire de menus</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <?php if(!isset($_SESSION))
+                {
+                    echo "<li><a href='login.php'>Connexion</a></li>";
+                }
+                else
+                {
+                    echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
+                }
+                ?>
+            </ul>
+        </nav>
+        <?php 
+        if(isset($_SESSION["nom_utilisateur"])){
+            echo "<p>Bienvenue, ".$_SESSION["nom_utilisateur"]."</p>";
+        }
+        ?>
         
 </body>
 </html>

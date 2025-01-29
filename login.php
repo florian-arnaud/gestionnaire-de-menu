@@ -38,6 +38,22 @@ if($_POST)
 </head>
 
 <body>
+
+<nav>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <?php if(!isset($_SESSION))
+                {
+                    echo "<li><a href='login.php'>Connexion</a></li>";
+                }
+                else
+                {
+                    echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
+                }
+                ?>
+            </ul>
+        </nav>
+
     <form action="login.php" method="post">
         <div> <label for="nom_utilisateur">Nom d'utilisateur:</label>
             <input type="text" id="nom_utilisateur" name="nom_utilisateur" required>

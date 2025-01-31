@@ -54,6 +54,7 @@ section article
     border: 1px solid black;
     background-size: cover;
     background-position: center;
+    border-radius: 3px;
 }
 
 article a 
@@ -69,9 +70,19 @@ article a
 
 }
 
+#article_ajout_menu
+{
+    background-image: url("../images/orange.jpg");
+
+}
 #article_affichage_plats
 {
     background-image: url("../images/fraise.jpg");
+}
+
+#article_affichage_menus
+{
+    background-image: url("../images/citron.jpg");
 }
 
 table {

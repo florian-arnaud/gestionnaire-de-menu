@@ -8,11 +8,11 @@ if($_SESSION['droits'] != 2)
     exit();
 }
 
-$id_plat = trim(htmlspecialchars($_GET['id']));
-$requete = $connexion->prepare("DELETE FROM plats WHERE id_plat = :id_plat");
-$requete->execute(['id_plat' => $id_plat]); 
+$id_menu = trim(htmlspecialchars($_GET['id']));
+$requete = $connexion->prepare("DELETE FROM menus WHERE id_menu = :id_menu");
+$requete->execute(['id_menu' => $id_menu]); 
 if ($requete) {
-    header('Location: plats.php');
+    header('Location: menus.php');
 } else {
     echo "La suppression n'a pas fonctionné.";
 }

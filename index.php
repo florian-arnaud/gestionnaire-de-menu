@@ -62,7 +62,21 @@ session_start();
             </article>
         </section>
 
+        <section>
 
+            <article id="article_ajout_menu">
+                <a href="ajouter_menu.php">        <h2>Ajouter un menu</h2>
+
+                </a>
+            </article>
+
+            <article id="article_affichage_menus">
+                <a href="menus.php">
+                    <h2>Afficher, modifier ou supprimer un menu</h2>
+                </a>
+
+            </article>
+        </section>
 
     </main>
 

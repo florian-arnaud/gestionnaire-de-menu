@@ -18,6 +18,7 @@ if ($_POST) {
     //Vérifie si le mot de passe correspond au mot de passe hashé dans la base de données. Si les identifiants sont bons, on stocke dans la session. Sinon, on affiche un message d'erreur.
     if ($reponse && password_verify($mot_de_passe, $reponse['mot_de_passe'])) {
         $_SESSION['nom_utilisateur'] = $_POST['nom_utilisateur'];
+        $_SESSION['id_utilisateur'] = $reponse['id_utilisateur'];
         $_SESSION['droits'] = $reponse['droits_utilisateur'];
         header('Location: index.php');
     } else {

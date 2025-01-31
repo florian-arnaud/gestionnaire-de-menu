@@ -36,19 +36,16 @@ if ($_POST) {
     <title>Connexion</title>
 </head>
 <nav>
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <?php if(!isset($_SESSION))
-                {
-                    echo "<li><a href='login.php'>Connexion</a></li>";
-                }
-                else
-                {
-                    echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
-                }
-                ?>
-            </ul>
-        </nav>
+    <ul>
+        <li><a href="index.php">Accueil</a></li>
+        <?php if (!isset($_SESSION)) {
+            echo "<li><a href='login.php'>Connexion</a></li>";
+        } else {
+            echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
+        }
+        ?>
+    </ul>
+</nav>
 
 <body>
     <form action="inscription.php" method="post">

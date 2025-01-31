@@ -38,8 +38,10 @@ if ($_POST) {
 <nav>
     <ul>
         <li><a href="index.php">Accueil</a></li>
-        <?php if (!isset($_SESSION)) {
+        <?php if (!isset($_SESSION['nom_utilisateur'])) {
             echo "<li><a href='login.php'>Connexion</a></li>";
+            echo "<li><a href='inscription.php'>S'inscrire</a></li>";
+
         } else {
             echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
         }

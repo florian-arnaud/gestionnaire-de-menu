@@ -37,17 +37,20 @@ if ($_POST) {
 
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <?php if (!isset($_SESSION)) {
-                echo "<li><a href='login.php'>Connexion</a></li>";
-            } else {
-                echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
-            }
-            ?>
-        </ul>
-    </nav>
+<nav>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <?php if(!isset($_SESSION['nom_utilisateur']))
+                {
+                    echo "<li><a href='login.php'>Connexion</a></li>";
+                }
+                else
+                {
+                    echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
+                }
+                ?>
+            </ul>
+        </nav>
 
     <form action="login.php" method="post">
         <div> <label for="nom_utilisateur">Nom d'utilisateur:</label>

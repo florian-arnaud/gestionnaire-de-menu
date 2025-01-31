@@ -3,7 +3,7 @@ require "config/connexionBDD.php";
 $requete = $connexion->prepare("SELECT * FROM categories");
 $requete->execute();
 $categories = $requete->fetchAll(PDO::FETCH_ASSOC);
-$requete = $connexion->prepare("SELECT nom_plat, nom_categorie, prix_plat, ingredient_1, ingredient_2, ingredient_3, image_plat FROM plats, categories WHERE plats.id_categorie = categories.id_categorie;");
+$requete = $connexion->prepare("SELECT id_plat, nom_plat, nom_categorie, prix_plat, ingredient_1, ingredient_2, ingredient_3, image_plat FROM plats, categories WHERE plats.id_categorie = categories.id_categorie;");
 $requete->execute();
 $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
 if ($_POST) {
@@ -57,7 +57,7 @@ if ($_POST) {
             <input type="text" name="nom_plat" id="nom_plat">
         </div>
         <div>
-            <label for="categorie_plat">Type de plat</label>
+            <label for="categorie">Type de plat</label>
             <select name="categorie" id="categorie">
                 <?php foreach ($categories as $categorie) {
                     echo "<option value='" . $categorie['id_categorie'] . "'>" . $categorie['nom_categorie'] . "</option>";
@@ -107,6 +107,7 @@ if ($_POST) {
         </thead>
 
         <tbody>
+            <!-- Boucle sur le tableau de la requête SELECT pour afficher chaque ligne de plat -->
             <?php foreach ($resultat as $plat) {
                 echo "<tr>";
                 echo "<td>" . $plat['nom_plat'] . "</td>";
@@ -116,6 +117,8 @@ if ($_POST) {
                 echo "<td>" . $plat['ingredient_2'] . "</td>";
                 echo "<td>" . $plat['ingredient_3'] . "</td>";
                 echo "<td><img src='images/images_plats/" . $plat['image_plat'] . "' alt='Image du plat'></td>";
+                echo "<td><a href='modifier_plat.php?id=" . $plat['id_plat'] . "'>Modifier</a></td>";
+                echo "<td><a href='supprimer_plat.php?id=" . $plat['id_plat'] . "'>Supprimer</a></td>";
                 echo "</tr>";
             }
             ?>

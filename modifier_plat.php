@@ -36,6 +36,7 @@ if($_POST)
         'image_plat' => trim(htmlspecialchars($fichier)),
         'id_plat' => $id_plat
     ]);
+    header('Location: plats.php');
 }
 ?>
 <!DOCTYPE html>

@@ -1,0 +1,154 @@
+
+
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+ul li a 
+{
+    color: white;
+    text-decoration: none;
+}
+ul li
+{
+    margin-right: 5%;
+
+}
+ul, h1, h2, p
+{
+    font-family: "Montserrat", sans-serif;
+
+}
+
+
+header
+{
+    background-color: #2c2c2c;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+main {
+    width: 80%;
+    height: 100vh;
+    margin: 2% auto;
+    background-color: white;
+
+}
+
+section
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+section article
+{
+    width: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-size: cover;
+    background-position: center;
+}
+
+article a 
+{
+    color: black;
+    text-decoration: none;
+    width: 80%;
+    text-align: center;
+}
+#article_ajout_plat
+{
+    background-image: url("../images/banane.jpg");
+
+}
+
+#article_affichage_plats
+{
+    background-image: url("../images/fraise.jpg");
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+thead th {
+    background-color: white;
+    color: #232323;
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-family: "Montserrat", sans-serif;
+}
+
+tbody td img {
+    max-width: 100px;
+    height: auto;
+}
+
+tbody td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+tbody td a:hover {
+    text-decoration: underline;
+}
+
+/* General form styling */
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Form input styling */
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}

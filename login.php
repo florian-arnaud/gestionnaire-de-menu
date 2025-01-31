@@ -1,9 +1,7 @@
 <!-- Récupère le fichier de connexion à la base de données -->
 <?php session_start();
 require "config/connexionBDD.php";
-if (isset($_SESSION["nom_utilisateur"])) {
-    header('Location: index.php');
-}
+
 
 if ($_POST) {
     $nom_utilisateur = $_POST['nom_utilisateur'];
@@ -32,26 +30,34 @@ if ($_POST) {
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Connexion</title>
 </head>
 
 <body>
 
-<nav>
+<header>
+        <nav>
             <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <?php if(!isset($_SESSION['nom_utilisateur']))
-                {
+                <div>
+                    <li><a href="index.php">Accueil</a></li>
+
+                </div>
+                <?php if (!isset($_SESSION['nom_utilisateur'])) {
                     echo "<li><a href='login.php'>Connexion</a></li>";
-                }
-                else
-                {
+                    echo "<li><a href='inscription.php'>S'inscrire</a></li>";
+                } else {
+                    echo "<div>";
+                    echo "<li><a href='#'>" . $_SESSION['nom_utilisateur'] . "</a></li>";
                     echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
+                    echo "</div>";
                 }
                 ?>
             </ul>
         </nav>
-
+    </header>
+    <main>
     <form action="login.php" method="post">
         <div> <label for="nom_utilisateur">Nom d'utilisateur:</label>
             <input type="text" id="nom_utilisateur" name="nom_utilisateur" required>
@@ -63,6 +69,8 @@ if ($_POST) {
 
         <input type="submit" value="Connexion">
     </form>
+    </main>
+
 </body>
 
 </html>

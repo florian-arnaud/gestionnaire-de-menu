@@ -45,6 +45,8 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
         </nav>
     </header>
     <main>
+        <h1>Liste des menus</h1>
+
         <table>
             <thead>
                 <th>Nom du menu</th>
@@ -60,7 +62,7 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
 
             <tbody>
                 <!-- Boucle sur le tableau de la requête SELECT pour afficher chaque ligne de plat -->
-                 
+
                 <?php
                 foreach ($resultat as $menu) {
                     echo "<tr>";

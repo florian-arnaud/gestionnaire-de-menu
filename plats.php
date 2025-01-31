@@ -44,6 +44,7 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
         </nav>
     </header>
     <main>
+        <h1>Liste des plats</h1>
         <table>
             <thead>
                 <th>Nom du plat</th>

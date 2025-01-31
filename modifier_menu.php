@@ -9,7 +9,7 @@ $requete->execute(['id_menu' => $id_menu]);
 $resultat = $requete->fetch(PDO::FETCH_ASSOC);
 if($_SESSION['droits'] != 2)
 {
-    header('Location: index.php');
+    header('Location: menus.php');
     exit();
 }
 if ($_POST) {
@@ -72,6 +72,8 @@ if ($_POST) {
         </nav>
     </header>
     <main>
+    <h1>Modifier un menu</h1>
+
     <form method="POST" enctype="multipart/form-data">
         <div>
             <label for="nom_menu">Nom du menu</label>

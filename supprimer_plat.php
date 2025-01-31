@@ -4,7 +4,7 @@ require_once "config/connexionBDD.php";
 
 if($_SESSION['droits'] != 2)
 {
-    header('Location: index.php');
+    header('Location: plats.php');
     exit();
 }
 

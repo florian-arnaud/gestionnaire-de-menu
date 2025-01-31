@@ -49,7 +49,8 @@ session_start();
         <section>
 
             <article id="article_ajout_plat">
-                <a href="ajouter_plat.php">        <h2>Ajouter un plat</h2>
+                <a href="ajouter_plat.php">
+                    <h2>Ajouter un plat</h2>
 
                 </a>
             </article>
@@ -65,7 +66,8 @@ session_start();
         <section>
 
             <article id="article_ajout_menu">
-                <a href="ajouter_menu.php">        <h2>Ajouter un menu</h2>
+                <a href="ajouter_menu.php">
+                    <h2>Ajouter un menu</h2>
 
                 </a>
             </article>

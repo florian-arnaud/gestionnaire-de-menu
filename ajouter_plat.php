@@ -5,7 +5,7 @@ $requete->execute();
 $categories = $requete->fetchAll(PDO::FETCH_ASSOC);
 if($_SESSION['droits'] != 2)
 {
-    header('Location: index.php');
+    header('Location: plats.php');
     exit();
 }
 if ($_POST) {
@@ -76,6 +76,7 @@ if ($_POST) {
         </nav>
     </header>
     <main>
+    <h1>Ajouter un plat</h1>
     <form method="POST" enctype="multipart/form-data">
         <div>
             <label for="nom_plat">Nom du plat</label>

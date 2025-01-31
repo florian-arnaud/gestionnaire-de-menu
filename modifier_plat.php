@@ -3,7 +3,7 @@ session_start();
 require "config/connexionBDD.php";
 if($_SESSION['droits'] != 2)
 {
-    header('Location: index.php');
+    header('Location: plats.php');
     exit();
 }
 $id_plat = trim(htmlspecialchars($_GET['id']));
@@ -53,8 +53,7 @@ if ($_POST) {
 </head>
 
 <body>
-
-    <body>
+    <h1>Modifier un plat</h1>
 
         <header>
             <nav>

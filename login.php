@@ -38,7 +38,7 @@ if ($_POST) {
 
 <body>
 
-<header>
+    <header>
         <nav>
             <ul>
                 <div>
@@ -59,17 +59,18 @@ if ($_POST) {
         </nav>
     </header>
     <main>
-    <form action="login.php" method="post">
-        <div> <label for="nom_utilisateur">Nom d'utilisateur:</label>
-            <input type="text" id="nom_utilisateur" name="nom_utilisateur" required>
-        </div>
+        <h1>Connexion</h1>
+        <form action="login.php" method="post">
+            <div> <label for="nom_utilisateur">Nom d'utilisateur:</label>
+                <input type="text" id="nom_utilisateur" name="nom_utilisateur" required>
+            </div>
 
-        <div> <label for="mot_de_passe">Mot de passe:</label>
-            <input type="password" id="mot_de_passe" name="mot_de_passe" required>
-        </div>
+            <div> <label for="mot_de_passe">Mot de passe:</label>
+                <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+            </div>
 
-        <input type="submit" value="Connexion">
-    </form>
+            <input type="submit" value="Connexion">
+        </form>
     </main>
 
 </body>

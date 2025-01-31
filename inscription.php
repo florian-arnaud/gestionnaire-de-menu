@@ -38,39 +38,43 @@ if ($_POST) {
     <title>Connexion</title>
 </head>
 <header>
-        <nav>
-            <ul>
-                <div>
-                    <li><a href="index.php">Accueil</a></li>
+    <nav>
+        <ul>
+            <div>
+                <li><a href="index.php">Accueil</a></li>
 
-                </div>
-                <?php if (!isset($_SESSION['nom_utilisateur'])) {
-                    echo "<li><a href='login.php'>Connexion</a></li>";
-                    echo "<li><a href='inscription.php'>S'inscrire</a></li>";
-                } else {
-                    echo "<div>";
-                    echo "<li><a href='#'>" . $_SESSION['nom_utilisateur'] . "</a></li>";
-                    echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
-                    echo "</div>";
-                }
-                ?>
-            </ul>
-        </nav>
-    </header>
+            </div>
+            <?php if (!isset($_SESSION['nom_utilisateur'])) {
+                echo "<li><a href='login.php'>Connexion</a></li>";
+                echo "<li><a href='inscription.php'>S'inscrire</a></li>";
+            } else {
+                echo "<div>";
+                echo "<li><a href='#'>" . $_SESSION['nom_utilisateur'] . "</a></li>";
+                echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
+                echo "</div>";
+            }
+            ?>
+        </ul>
+    </nav>
+</header>
 
 <body>
+
     <main>
-    <form action="inscription.php" method="post">
-        <div> <label for="nom_utilisateur">Nom d'utilisateur:</label>
-            <input type="text" id="nom_utilisateur" name="nom_utilisateur" required>
-        </div>
+        <h1>Inscription</h1>
 
-        <div> <label for="mot_de_passe">Mot de passe:</label>
-            <input type="password" id="mot_de_passe" name="mot_de_passe" required>
-        </div>
+        <form action="inscription.php" method="post">
+            <div> <label for="nom_utilisateur">Nom d'utilisateur:</label>
+                <input type="text" id="nom_utilisateur" name="nom_utilisateur" required>
+            </div>
 
-        <input type="submit" value="S'inscrire">
-    </form>
+            <div> <label for="mot_de_passe">Mot de passe:</label>
+                <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+            </div>
+
+            <input type="submit" value="S'inscrire">
+        </form>
 </body>
-    </main>
+</main>
+
 </html>

@@ -5,7 +5,7 @@ $requete->execute();
 $plats = $requete->fetchAll(PDO::FETCH_ASSOC);
 if($_SESSION['droits'] != 2)
 {
-    header('Location: index.php');
+    header('Location: menus.php');
     exit();
 }
 if ($_POST) {
@@ -67,6 +67,8 @@ if ($_POST) {
         </nav>
     </header>
     <main>
+    <h1>Ajouter un menu</h1>
+
     <form method="POST" enctype="multipart/form-data">
         <div>
             <label for="nom_menu">Nom du menu</label>

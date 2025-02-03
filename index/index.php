@@ -14,7 +14,7 @@ $plats = [
         'description' => 'Laitue romaine, croûtons, parmesan',
         'prix' => 9.90,
         'categorie_id' => 1,
-        'image' => 'images/salade.jpg'
+        'images' => '../images/salade.jpg'
     ],
     [
         'id' => 2,
@@ -22,7 +22,7 @@ $plats = [
         'description' => 'Bavette de boeuf, frites maison',
         'prix' => 16.50,
         'categorie_id' => 2,
-        'image' => 'images/steak.jpg'
+        'images' => '../images/steak.jpg'
     ]
 ];
 
@@ -153,7 +153,7 @@ $menus = [
                         <?php foreach ($plats as $plat): ?>
                         <div class="col">
                             <div class="card dish-card h-100 shadow">
-                                <img src="<?= $plat['image'] ?>" class="card-img-top" alt="...">
+                                <img src="<?= $plat['images'] ?>" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><?= htmlspecialchars($plat['nom']) ?></h5>
                                     <p class="card-text text-muted"><?= htmlspecialchars($plat['description']) ?></p>

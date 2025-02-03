@@ -1,4 +1,4 @@
-<?php
+<<?php
 session_start();
 // Dummy data pour le styling
 $categories = [
@@ -153,8 +153,7 @@ $menus = [
                         <?php foreach ($plats as $plat): ?>
                         <div class="col">
                             <div class="card dish-card h-100 shadow">
-                                <img src ="images/salade.jpg" class="card-img-top" alt="salade">
-                                <img src = "images/steak.jpg
+                                <img src="<?= $plat['image'] ?>" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><?= htmlspecialchars($plat['nom']) ?></h5>
                                     <p class="card-text text-muted"><?= htmlspecialchars($plat['description']) ?></p>

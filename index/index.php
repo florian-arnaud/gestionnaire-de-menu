@@ -1,4 +1,4 @@
-<<?php
+<?php
 session_start();
 // Dummy data pour le styling
 $categories = [

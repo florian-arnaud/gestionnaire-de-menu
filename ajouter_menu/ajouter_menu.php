@@ -5,7 +5,7 @@ $requete->execute();
 $plats = $requete->fetchAll(PDO::FETCH_ASSOC);
 if($_SESSION['droits'] != 2)
 {
-    header('Location: index.php');
+    header('Location: ajouter_menu.php');
     exit();
 }
 if ($_POST) {

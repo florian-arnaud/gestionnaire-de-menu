@@ -33,7 +33,7 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
                 </div>
                 <?php if (!isset($_SESSION['nom_utilisateur'])) {
                     echo "<li><a href='http://localhost/gestionnaire-de-menu/login/login.php'>Connexion</a></li>";
-                    echo "<li><a href='http://localhost/gestionnaire-de-menu/inscription/inscription.php'>S'inscrire</a></li>";
+                    echo "<li><a href='http://localhost/gestionnaire-de-menu/inscription/inscription.php'gi>S'inscrire</a></li>";
                 } else {
                     echo "<div>";
                     echo "<li><a href='#'>" . $_SESSION['nom_utilisateur'] . "</a></li>";

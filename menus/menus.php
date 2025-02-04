@@ -1,4 +1,4 @@
-<?php session_start();
+<div?php session_start();
 require ("../config/connexionBDD.php");
 
 
@@ -26,8 +26,11 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
         <nav>
             <ul>
                 <div>
-                    <li><a href="../index.php">Accueil</a></li>
-
+                    <li><a href="http://localhost/gestionnaire-de-menu/index/">Accueil</a></li>
+                     <li>  <a href=".http://localhost/gestionnaire-de-menu/login/login.php">Connexion</a></li>
+                    <li><a href="http://localhost/gestionnaire-de-menu/inscription/inscription.php">S'inscrire/a> </li >                              </li>
+                    
+                    
                 </div>
                 <?php if (!isset($_SESSION['nom_utilisateur'])) {
                     echo "<li><a href='login.php'>Connexion</a></li>";

@@ -9,7 +9,7 @@ $requete->execute(['id_menu' => $id_menu]);
 $resultat = $requete->fetch(PDO::FETCH_ASSOC);
 if($_SESSION['droits'] != 2)
 {
-    header('Location: http://localhost/gestionnaire-de-menu/index/r');
+    header('Location: http://localhost/gestionnaire-de-menu/index/');
     exit();
 }
 if ($_POST) {

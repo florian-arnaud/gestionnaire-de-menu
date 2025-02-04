@@ -26,7 +26,7 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
         <nav>
             <ul>
                 <div>
-                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="../index.php">Accueil</a></li>
 
                 </div>
                 <?php if (!isset($_SESSION['nom_utilisateur'])) {

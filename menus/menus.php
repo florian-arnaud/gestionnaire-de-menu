@@ -1,5 +1,5 @@
 <?php session_start();
-require (__DIR__."\config\connexionBDD.php");
+require ("../config/connexionBDD.php");
 
 
 $requete = $connexion->prepare("SELECT * FROM plats");
@@ -9,7 +9,6 @@ $plats = $requete->fetchAll(PDO::FETCH_ASSOC);
 $requete = $connexion->prepare("SELECT menus.id_menu, menus.nom_menu, plats1.id_plat AS id_plat1, plats1.nom_plat AS nom_plat1, plats2.id_plat AS id_plat2, plats2.nom_plat AS nom_plat2, plats3.id_plat AS id_plat3, plats3.nom_plat AS nom_plat3, menus.prix_menu, menus.description_menu, utilisateurs.nom_utilisateur FROM menus LEFT JOIN plats AS plats1 ON menus.id_plat_1 = plats1.id_plat LEFT JOIN plats AS plats2 ON menus.id_plat_2 = plats2.id_plat LEFT JOIN plats AS plats3 ON menus.id_plat_3 = plats3.id_plat LEFT JOIN utilisateurs ON menus.id_utilisateur = utilisateurs.id_utilisateur; ");
 $requete->execute();
 $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
-
 
 ?>
 <!DOCTYPE html>

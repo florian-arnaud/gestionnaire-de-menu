@@ -7,9 +7,11 @@ $requete = $connexion->prepare("SELECT * FROM categories");
 $requete->execute();
 $categories = $requete->fetchAll(PDO::FETCH_ASSOC);
 if($_SESSION['droits'] != 2)
+$droits='1';
 {
     
     exit();
+    
 }
 if ($_POST) {
     // Vérification des données du formulaire

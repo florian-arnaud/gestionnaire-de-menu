@@ -10,6 +10,7 @@ $requete = $connexion->prepare("SELECT menus.id_menu, menus.nom_menu, plats1.id_
 $requete->execute();
 $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,6 +19,7 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -26,15 +28,12 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
         <nav>
             <ul>
                 <div>
-                    <li><a href="http://localhost/gestionnaire-de-menu/index/">Accueil</a></li>
-                     <li> <a href=".http://localhost/gestionnaire-de-menu/login/login.php">Connexion</a></li>
-                    <li><a href="http://localhost/gestionnaire-de-menu/inscription/inscription.php">S'inscrire<s/a> </li >                              
-                    
-                    
+                    <li><a href="index.php">Accueil</a></li>
+
                 </div>
                 <?php if (!isset($_SESSION['nom_utilisateur'])) {
-                    echo "<li><a href='http://localhost/gestionnaire-de-menu/login/login.php'>Connexion</a></li>";
-                    echo "<li><a href='http://localhost/gestionnaire-de-menu/inscription/inscription.php>S'inscrire</a></li>";
+                    echo "<li><a href='login.php'>Connexion</a></li>";
+                    echo "<li><a href='inscription.php'>S'inscrire</a></li>";
                 } else {
                     echo "<div>";
                     echo "<li><a href='#'>" . $_SESSION['nom_utilisateur'] . "</a></li>";
@@ -46,6 +45,8 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
         </nav>
     </header>
     <main>
+        <h1>Liste des menus</h1>
+
         <table>
             <thead>
                 <th>Nom du menu</th>
@@ -61,7 +62,7 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
 
             <tbody>
                 <!-- Boucle sur le tableau de la requête SELECT pour afficher chaque ligne de plat -->
-                 
+
                 <?php
                 foreach ($resultat as $menu) {
                     echo "<tr>";

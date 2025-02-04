@@ -1,4 +1,4 @@
 <?php
 session_start();
 session_destroy();
-header('Location: ../deconnexion.php');
+header('Location: ../deconnexion');

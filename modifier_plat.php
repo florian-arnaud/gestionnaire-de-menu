@@ -53,7 +53,6 @@ if ($_POST) {
 </head>
 
 <body>
-    <h1>Modifier un plat</h1>
 
         <header>
             <nav>
@@ -77,6 +76,8 @@ if ($_POST) {
         </header>
 
         <main>
+        <h1>Modifier un plat</h1>
+
             <form method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="nom_plat">Nom du plat</label>

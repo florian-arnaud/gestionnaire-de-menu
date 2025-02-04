@@ -1,4 +1,4 @@
-<div?php session_start();
+<?php session_start();
 require ("../config/connexionBDD.php");
 
 
@@ -27,8 +27,8 @@ $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
             <ul>
                 <div>
                     <li><a href="http://localhost/gestionnaire-de-menu/index/">Accueil</a></li>
-                     <li>  <a href=".http://localhost/gestionnaire-de-menu/login/login.php">Connexion</a></li>
-                    <li><a href="http://localhost/gestionnaire-de-menu/inscription/inscription.php">S'inscrire/a> </li >                              </li>
+                     <li> <a href=".http://localhost/gestionnaire-de-menu/login/login.php">Connexion</a></li>
+                    <li><a href="http://localhost/gestionnaire-de-menu/inscription/inscription.php">S'inscrire<s/a> </li >                              </li>
                     
                     
                 </div>

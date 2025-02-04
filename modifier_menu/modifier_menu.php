@@ -1,5 +1,5 @@
 <?php session_start();
-require "config/connexionBDD.php";
+require "../config/connexionBDD.php";
 $id_menu = trim(htmlspecialchars($_GET['id']));
 $requete = $connexion->prepare("SELECT * FROM plats");
 $requete->execute();
@@ -45,8 +45,7 @@ if ($_POST) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">>
     <title>Document</title>
 </head>
 
@@ -55,12 +54,12 @@ if ($_POST) {
         <nav>
             <ul>
                 <div>
-                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="http://localhost/gestionnaire-de-menu/index/">Accueil</a></li>
 
                 </div>
                 <?php if (!isset($_SESSION['nom_utilisateur'])) {
-                    echo "<li><a href='login.php'>Connexion</a></li>";
-                    echo "<li><a href='inscription.php'>S'inscrire</a></li>";
+                    echo "<li><a href='http://localhost/gestionnaire-de-menu/login/login.php'>Connexion</a></li>";
+                    echo "<li><a href='http://localhost/gestionnaire-de-menu/inscription/inscription.php'>S'inscrire</a></li>";
                 } else {
                     echo "<div>";
                     echo "<li><a href='#'>" . $_SESSION['nom_utilisateur'] . "</a></li>";

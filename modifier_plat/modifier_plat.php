@@ -1,13 +1,9 @@
 <?php
 session_start();
-$connexion = new PDO( 'mysql:host=localhost;dbname=gestionnaire-de-menu', 'root', '' );
-            if(!$connexion){
-                    die("Erreur : La connexion a échoué.");
-            }
 require "config/connexionBDD.php";
 if($_SESSION['droits'] != 2)
 {
-    header('Location: index.php');
+    header('Location: plats.php');
     exit();
 }
 $id_plat = trim(htmlspecialchars($_GET['id']));
@@ -51,14 +47,12 @@ if ($_POST) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Modification de plat</title>
 </head>
 
 <body>
-
-    <body>
 
         <header>
             <nav>
@@ -82,6 +76,8 @@ if ($_POST) {
         </header>
 
         <main>
+        <h1>Modifier un plat</h1>
+
             <form method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="nom_plat">Nom du plat</label>

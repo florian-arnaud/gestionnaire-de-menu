@@ -43,7 +43,7 @@ if ($_POST) {
         <nav>
             <ul>
                 <div>
-                    <li><a href="../index.php">Accueil</a></li>
+                    <li><a href="index.php">Accueil</a></li>
 
                 </div>
                 <?php if (!isset($_SESSION['nom_utilisateur'])) {

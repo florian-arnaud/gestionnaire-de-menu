@@ -8,7 +8,7 @@ $requete->execute();
 $categories = $requete->fetchAll(PDO::FETCH_ASSOC);
 if($_SESSION['droits'] != 2)
 {
-    header('Location: index.php');
+    
     exit();
 }
 if ($_POST) {

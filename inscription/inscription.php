@@ -3,7 +3,7 @@
 <!-- Récupère le fichier de connexion à la base de données -->
 
 <?php session_start();
-require "config/connexionBDD.php";
+require "../config/connexionBDD.php";
 if (isset($_SESSION["nom_utilisateur"])) {
     header('Location: index.php');
 }
@@ -43,7 +43,7 @@ if ($_POST) {
         <nav>
             <ul>
                 <div>
-                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="../index.php">Accueil</a></li>
 
                 </div>
                 <?php if (!isset($_SESSION['nom_utilisateur'])) {

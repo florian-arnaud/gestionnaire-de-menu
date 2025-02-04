@@ -4,10 +4,11 @@
          die("Erreur : La connexion a échoué.");
  };
 $requete = $connexion->prepare("SELECT * FROM categories");
+$droits = $requete->execute();
 $requete->execute();
 $categories = $requete->fetchAll(PDO::FETCH_ASSOC);
 if($_SESSION['droits'] != 2)
-$droits='1';
+
 {
     
     exit();

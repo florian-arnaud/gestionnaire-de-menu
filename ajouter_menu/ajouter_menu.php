@@ -1,5 +1,5 @@
 <?php session_start();
-require "config/connexionBDD.php";
+require "../config/connexionBDD.php";
 $requete = $connexion->prepare("SELECT * FROM plats");
 $requete->execute();
 $plats = $requete->fetchAll(PDO::FETCH_ASSOC);

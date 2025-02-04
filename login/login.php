@@ -1,7 +1,7 @@
 <?php 
 
  session_start();
-require "config/connexionBDD.php";
+require "../config/connexionBDD.php";
 
 
 if ($_POST) {
